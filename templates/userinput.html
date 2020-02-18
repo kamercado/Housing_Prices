@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>User Input</title>
+  <script src="https://kit.fontawesome.com/90051f9e42.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style_cover.css')}}">
+</head>
+
+
+<body> 
+    <h3>House Price Prediction Form - Ames IA</h3> 
+  
+<div> 
+  <form action="/predict" method="POST"> 
+    <label for="MSZoning">Zoning: General zoning classification of the property </label>
+    <select id="MSZoning" name="MSZoning"> 
+      <option value="1">Commercial</option> 
+      <option value="2">Residential - High/Medium Density</option> 
+      <option value="3">Residential - Low Density</option> 
+      <option value="4">Residential - Floating Village</option> 
+    </select>  
+    <br> 
+    <label for="LotFrontage">Lot Frontage: Linear feet of street connected to property 
+</label> 
+    <input type="text" id="LotFrontage" name="LotFrontage"> ft    
+    <br> 
+    Neighborhood: Physical locations within Ames city limits 
+
+    <label for="Neighborhood">Neighborhood: Physical locations within Ames city limits</label> 
+    <select id="Neighborhood" name="Neighborhood"> 
+      <option value="0">Meadow Village</option> 
+      <option value="1">Iowa DOT and Rail Road</option> 
+      <option value="2">Briardale</option> 
+      <option value="3">Brookside</option> 
+      <option value="4">Edwards</option> 
+      <option value="5">Old Town</option> 
+      <option value="6">Sawyer</option> 
+      <option value="7">Bluestem</option> 
+      <option value="8">South & West of Iowa State University</option> 
+      <option value="9">Northpark Villa</option> 
+      <option value="10">North Ames</option> 
+      <option value="11">Mitchell</option> 
+      <option value="12">Sawyer West</option> 
+      <option value="13">Northwest Ames</option> 
+      <option value="14">Gilbert</option> 
+      <option value="15">Bloomington Heights</option>
+      <option value="16">College Creek</option> 
+      <option value="17">Crawford</option> 
+      <option value="18">Clear Creek</option> 
+      <option value="19">Somerset</option> 
+      <option value="20">Veenker</option> 
+      <option value="21">Timberland</option>
+      <option value="22">Stone Brook</option> 
+      <option value="23">Northridge Heights</option> 
+      <option value="24">Northridge</option>   
+    </select> 
+    <br> 
+    <label for="OverallQual">Overall Quality: Please rate the overall material and finish of the house</label> 
+    <select id="OverallQual" name="OverallQual"> 
+      <option value="10">Very Excellent</option> 
+      <option value="9">Excellent</option> 
+      <option value="8">Very Good</option>
+      <option value="7">Good</option>
+      <option value="6">Above Average</option>
+      <option value="5">Average</option>
+      <option value="4">Below Average</option>
+      <option value="3">Fair</option>
+      <option value="2">Poor</option>
+      <option value="1">Very Poor</option>
+    </select> 
+    <br> 
+    <label for="1stFlrSF">First Floor Area Size </label> 
+    <input type="text" id="1stFlrSF" name="1stFlrSF"> sq ft  
+    <br> 
+    <label for="2ndFlrSF">Second Floor Area Size </label> 
+    <input type="text" id="2ndFlrSF" name="2ndFlrSF"> sq ft
+    <br>
+    <label for="FullBath">Number of Full Bathrooms</label> 
+    <input type="text" id="FullBath" name="FullBath">
+    <br>
+    <label for="KitchenQual">Kitchen Quality: Please rate the kitchen quality </label> 
+    <select id="KitchenQual" name="KitchenQual"> 
+      <option value="5">Excellent</option>
+      <option value="4">Good</option> 
+      <option value="3">Typical/Average</option> 
+      <option value="2">Fair</option>
+      <option value="1">Poor</option> 
+    </select> 
+    <br> 
+    <label for="TotRmsAbvGrd">Total Number of Rooms Above Ground (excl. Bathrooms) </label> 
+    <input type="text" id="TotRmsAbvGrd" name="TotRmsAbvGrd">
+    <br>
+    <label for="Fireplaces">Number of Fireplaces </label> 
+    <input type="text" id="Fireplaces" name="Fireplaces">
+    <br>
+    <label for="GarageType">Garage Type: Garage location</label> 
+    <select id="GarageType" name="GarageType"> 
+      <option value="7">More than one type of garage</option> 
+      <option value="6">Attached to home</option> 
+      <option value="5">Basement Garage</option> 
+      <option value="4">Built-In (Garage part of house - typically has room above garage)</option> 
+      <option value="3">Car Port</option>
+      <option value="2">Detached from home</option>
+      <option value="1">No Garage</option> 
+    </select> 
+    <br>
+    <label for="GarageCars">Size of garage in car capacity (e.g. input 2 for 2 cars) </label> 
+    <input type="text" id="GarageCars" name="GarageCars">
+    <br>
+    <label for="GarageArea">Size of garage in square feet </label> 
+    <input type="text" id="GarageArea" name="GarageArea">
+    <br>
+    <label for="WoodDeckSF">Size of wood deck area in square feet </label> 
+    <input type="text" id="WoodDeckSF" name="WoodDeckSF">
+    <br> 
+    <label for="OpenPorchSF">Size of open porch area in square feet </label> 
+    <input type="text" id="OpenPorchSF" name="OpenPorchSF">
+    <br> 
+    <input type="submit" value="Submit"> 
+  </form> 
+ {{ prediction_text }}
+</div> 
+</body> 
+</html> 
