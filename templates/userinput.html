@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>User Input</title>
-  <script src="https://kit.fontawesome.com/90051f9e42.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style_cover.css')}}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Team Project</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+
+}
+
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: black;
+}
+
+</style>
 </head>
 
+<body>
 
-<body> 
-    <h3>House Price Prediction Form - Ames IA</h3> 
-  
-<div> 
+<div class="container">
+    <div class="row">
+		<img src="/static/houseImage.jpg" alt="Los Angeles" width="100%" height="500">
+		<div class="top-right"><h1>House Price Prediction in Ames, Iowa</h1></div>
+	
+    </div>
+<div style="text-align: left"> 
+
+<div class="card">
+  <div class="card-body">
   <form action="/predict" method="POST"> 
-    <label for="MSZoning">Zoning: General zoning classification of the property </label>
+    <label for="MSZoning">General zoning classification of the property </label>
     <select id="MSZoning" name="MSZoning"> 
       <option value="1">Commercial</option> 
       <option value="2">Residential - High/Medium Density</option> 
@@ -21,13 +46,12 @@
       <option value="4">Residential - Floating Village</option> 
     </select>  
     <br> 
-    <label for="LotFrontage">Lot Frontage: Linear feet of street connected to property 
+    <label for="LotFrontage">Linear feet of street connected to property 
 </label> 
-    <input type="text" id="LotFrontage" name="LotFrontage"> ft    
+    <input type="text" id="LotFrontage" name="LotFrontage" value="0"> ft    
     <br> 
-    Neighborhood: Physical locations within Ames city limits 
 
-    <label for="Neighborhood">Neighborhood: Physical locations within Ames city limits</label> 
+    <label for="Neighborhood">Physical locations within Ames city limits</label> 
     <select id="Neighborhood" name="Neighborhood"> 
       <option value="0">Meadow Village</option> 
       <option value="1">Iowa DOT and Rail Road</option> 
@@ -56,7 +80,7 @@
       <option value="24">Northridge</option>   
     </select> 
     <br> 
-    <label for="OverallQual">Overall Quality: Please rate the overall material and finish of the house</label> 
+    <label for="OverallQual">Please rate the overall material and finish of the house</label> 
     <select id="OverallQual" name="OverallQual"> 
       <option value="10">Very Excellent</option> 
       <option value="9">Excellent</option> 
@@ -71,13 +95,13 @@
     </select> 
     <br> 
     <label for="1stFlrSF">First Floor Area Size </label> 
-    <input type="text" id="1stFlrSF" name="1stFlrSF"> sq ft  
+    <input type="text" id="1stFlrSF" name="1stFlrSF" value="0"> sq ft  
     <br> 
     <label for="2ndFlrSF">Second Floor Area Size </label> 
-    <input type="text" id="2ndFlrSF" name="2ndFlrSF"> sq ft
+    <input type="text" id="2ndFlrSF" name="2ndFlrSF" value="0"> sq ft
     <br>
     <label for="FullBath">Number of Full Bathrooms</label> 
-    <input type="text" id="FullBath" name="FullBath">
+    <input type="text" id="FullBath" name="FullBath" value="0">
     <br>
     <label for="KitchenQual">Kitchen Quality: Please rate the kitchen quality </label> 
     <select id="KitchenQual" name="KitchenQual"> 
@@ -89,12 +113,12 @@
     </select> 
     <br> 
     <label for="TotRmsAbvGrd">Total Number of Rooms Above Ground (excl. Bathrooms) </label> 
-    <input type="text" id="TotRmsAbvGrd" name="TotRmsAbvGrd">
+    <input type="text" id="TotRmsAbvGrd" name="TotRmsAbvGrd" value="0">
     <br>
     <label for="Fireplaces">Number of Fireplaces </label> 
-    <input type="text" id="Fireplaces" name="Fireplaces">
+    <input type="text" id="Fireplaces" name="Fireplaces" value="0">
     <br>
-    <label for="GarageType">Garage Type: Garage location</label> 
+    <label for="GarageType">Garage location</label> 
     <select id="GarageType" name="GarageType"> 
       <option value="7">More than one type of garage</option> 
       <option value="6">Attached to home</option> 
@@ -106,20 +130,49 @@
     </select> 
     <br>
     <label for="GarageCars">Size of garage in car capacity (e.g. input 2 for 2 cars) </label> 
-    <input type="text" id="GarageCars" name="GarageCars">
+    <input type="text" id="GarageCars" name="GarageCars" value="1">
     <br>
     <label for="GarageArea">Size of garage in square feet </label> 
-    <input type="text" id="GarageArea" name="GarageArea">
+    <input type="text" id="GarageArea" name="GarageArea" value="0">
     <br>
     <label for="WoodDeckSF">Size of wood deck area in square feet </label> 
-    <input type="text" id="WoodDeckSF" name="WoodDeckSF">
+    <input type="text" id="WoodDeckSF" name="WoodDeckSF" value="0">
     <br> 
     <label for="OpenPorchSF">Size of open porch area in square feet </label> 
-    <input type="text" id="OpenPorchSF" name="OpenPorchSF">
+    <input type="text" id="OpenPorchSF" name="OpenPorchSF" value="0">
+    <br> 
+	<div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Price Prediction</button></div>
+	<div class="alert alert-primary" role="alert">{{ prediction_text }}</div>
+
+  </form> 
+  <h3>For Investors:</h3>
+  <form action="/calculator" method="POST"> 
+    <label for="investment">Investment (in USD) $
+</label> 
+    <input type="text" id="investment" name="investment"> 
     <br> 
     <input type="submit" value="Submit"> 
-  </form> 
- {{ prediction_text }}
+	<div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Investment Prediction</button></div>
+  </form>
+  
+  <div class="alert alert-primary" role="alert">{{ roi_text }}</div>
+  </div>
+</div>
+
+
+  
+
 </div> 
-</body> 
-</html> 
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+
+</body>
+
+</html>
