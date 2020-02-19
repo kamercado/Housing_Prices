@@ -9,7 +9,7 @@
 
 
 <body> 
-    <h3>House Price Prediction Form - Ames IA</h3> 
+    <h3>House Price Prediction Form - Ames, IA</h3> 
   
 <div> 
   <form action="/predict" method="POST"> 
@@ -119,7 +119,17 @@
     <br> 
     <input type="submit" value="Submit"> 
   </form> 
- {{ prediction_text }}
+   {{ prediction_text }}
+<h3>For Investors:</h3>
+  <form action="/calculator" method="POST"> 
+    <label for="investment">Investment (in USD) $
+</label> 
+    <input type="text" id="investment" name="investment"> 
+    <br> 
+    <input type="submit" value="Submit"> 
+  </form>
+  {{ roi_text }}
+
 </div> 
 </body> 
 </html> 
