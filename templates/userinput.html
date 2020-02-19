@@ -149,9 +149,8 @@
   <form action="/calculator" method="POST"> 
     <label for="investment">Investment (in USD) $
 </label> 
-    <input type="text" id="investment" name="investment"> 
+    <input type="text" id="investment" name="investment" value="100"> 
     <br> 
-    <input type="submit" value="Submit"> 
 	<div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Investment Prediction</button></div>
   </form>
   
@@ -159,18 +158,10 @@
   </div>
 </div>
 
-
-  
-
 </div> 
 
 </div>
 
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 
 </body>
