@@ -29,7 +29,7 @@ def cali():
 
 #load the trained model
 house_model = pickle.load(open('model.pkl','rb'))
-cali_model = pickle.load(open('model_2.pkl','rb'))
+cali_model = pickle.load(open('ca_model.pkl','rb'))
 #app route to create API to predict Airbnb host's rating
 @app.route('/predict',methods=['POST'])
 def predict():
