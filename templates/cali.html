@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>California</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+.container {
+  position: relative;
+  text-align: center;
+
+}
+
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: black;
+}
+
+</style>
+</head>
+
+<body>
+<nav class = "navbar navbar-expand-lg bg-light">
+			<a class = "navbar-brand" href= ""> Housing Prices </a>
+			<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "False" aria-label = "Toggle navigation">
+				<span class = "navbar-toggler-icon"></span>
+			</button>
+
+		  
+        <a class="nav-link" href="/">Iowa<span class="sr-only">(current)</span></a>  
+         <a class="nav-link" href="/cali">Southern California<span class="sr-only">(current)</span></a>
+         
+
+
+    
+    </nav>
+<div class="container">
+    <div class="row">
+		<img src="https://final-project-data-uci-da-bootcamp.s3-us-west-2.amazonaws.com/ba081ecf115e413174eebb046154bdcf.jpg" alt="Los Angeles" width="100%" height="500">
+		<div class="top-right"><h1>House Price Prediction in Los Angeles, Orange, & Riverside </h1></div>
+	
+    </div>
+<div style = "text-align: left">
+    <div class = "card">
+    <form action = "/predict_ca" method = "POST">
+        <label for = "County">
+        What county do you want to live in?</label>
+        <select id = "County" name = "County">
+            <option value = 1> Riverside</option>
+            <option value = 2> Los Angeles </option>
+            <option value = 3> Orange County </option>
+            
+        </select>
+        <br>
+        
+
+        <label for = "Sqft/A'">
+        Sqft of House
+        </label>
+        <input type = "text" id = "Sqft/A" name = "Sqft/A" value = "0"> sqft/A
+        <br>
+        <label for ="YrBuilt">
+        Year House was Built?
+        </label>
+        <input type = "text" id = "YrBuilt" name = "YrBuilt" value = "0">
+        <br>
+        <label for = "View">
+        Does your house have a good view?</label>
+        <select id = "View" name = "View">
+            <option value = 0> No</option>
+            <option value = 1> Yes </option>
+        </select>
+        <br>
+        <label for = "Pool">
+        Does your house have a have a private Pool?</label>
+        <select id = "Pool" name = "Pool">
+            <option value = 0> No</option>
+            <option value = 1> Yes </option>
+        </select>
+        <br>
+        <label for ="Attics">
+        How many attics does your house have?
+        </label>
+        <input type = "text" id = "Attics" name = "Attics" value = "0">
+        <br>
+        <label for ="Basement">
+        Do you have a basement? If so how many?
+        </label>
+        <input type = "text" id = "Basement" name = "basement" value = "0">
+        <br>
+        <label for ="Beds">
+        How many bedrooms does your house have?
+        </label>
+        <input type = "text" id = "Beds" name = "Beds" value = "0">
+        <br>
+        <label for ="Baths">
+        How many baths does your house have?
+        </label>
+        <input type = "text" id = "baths" name = "baths" value = "0">
+        <br>
+        <label for ="LSqft">
+        What is your lot size per square foot?
+        </label>
+        <input type = "text" id = "LSqft" name = "LSqft" value = "0">
+        <br>
+        <div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Price Prediction</button></div>
+        <div class="alert alert-primary" role="alert">{{ prediction_text }}</div>
+
+        
+        
+        
+        
+    </form>
+    </div>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
