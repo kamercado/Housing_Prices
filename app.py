@@ -43,14 +43,14 @@ def predict():
 	#populate webpage with price predictioin
 	return render_template('userinput.html', prediction_text = 'Your house in Ames, Iowa will sell for approx. ${}'.format(price))
 
-@app.route('/results',methods=['POST'])
-def result():
-	data = request.get_json(force=True)
-	#make prediction of price using the house_model that was pickled
-	prediction = house_model.predict([[np.array(list(data.values()))]])
-	#price (output) is first value of prediction
-	output = prediction[0]
-	return jsonify(output)
+# @app.route('/results',methods=['POST'])
+# def result():
+# 	data = request.get_json(force=True)
+# 	#make prediction of price using the house_model that was pickled
+# 	prediction = house_model.predict([[np.array(list(data.values()))]])
+# 	#price (output) is first value of prediction
+# 	output = prediction[0]
+# 	return jsonify(output)
 
 #app route to calculate ROI
 @app.route('/calculator', methods=['POST'])
@@ -61,8 +61,8 @@ def calculator():
 	for x in request.form.values():
 		investment = float(x)
 	#calculate roi
-	roi = float(est_price) - float(investment)
-	return render_template('userinput.html', roi_text = 'Your expected return on investment (ROI) is approx. ${}'.format(roi))
+	roi = ((float(est_price) - float(investment))/float(investment))*100
+	return render_template('userinput.html', roi_text = 'Your expected return on investment (ROI) is approx. {}%'.format(roi))
 
 
 if __name__ == '__main__':
