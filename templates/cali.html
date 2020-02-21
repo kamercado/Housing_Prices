@@ -49,68 +49,313 @@
 <div style = "text-align: left">
     <div class = "card">
     <form action = "/predict_ca" method = "POST">
+        <label for = "Sqft/A">
+           What is the Square footage of the House?
+        </label>
+        <input type ="text" id = "Sqft/A" name = "Sqft/A" value = "0"> sqft
+        <br>
         <label for = "County">
-        What county do you want to live in?</label>
+        What County is the house located in?</label>
         <select id = "County" name = "County">
             <option value = 1> Riverside</option>
             <option value = 2> Los Angeles </option>
-            <option value = 3> Orange County </option>
+            <option value = 3> Orange County </option>     
+        </select>
+        <br>
+        <label for = "City">
+        What City is the house located in?</label>
+        <select id = "City" name = "City">
+            <option value = 82> Acton </option>
+            <option value = 176> Agoura Hills </option>
+            <option value = 124> Agua Dulce </option>
+            <option value = 72> Aguanga </option>
+            <option value = 143> Alberhill </option>
+            <option value = 184> Aliso Viejo </option>
+            <option value = 177> Altadena </option>
+            <option value = 103> Anaheim </option>
+            <option value = 170> Anaheim Hills </option>
+            <option value = 16> Anza </option>
+            <option value = 200> Arcadia </option>
+            <option value = 74> Arleta </option>
+            <option value = 78> Artesia </option>
+            <option value = 198> Avalon </option>
+            <option value = 67> Azusa </option>
+            <option value = 54> Baldwin Park </option>
+            <option value = 9> Banning </option>
+            <option value = 22> Beaumont </option>
+            <option value = 51> Beaumont </option>
+            <option value = 47> Bell </option>
+            <option value = 59> Bell Gardens </option>
+            <option value = 71> Bellflower </option>
+            <option value = 61> Bermuda Dunes </option>
+            <option value = 1> Blythe </option>
+            <option value = 156> Brea </option>
+            <option value = 106> Buena Park </option>
+            <option value = 191> Burbank </option>
+            <option value = 5> Cabazon </option>
+            <option value = 204> Calabasas </option>
+            <option value = 25> Calimesa </option>
+            <option value = 84> Canyon Country </option>
+            <option value = 97> Canyon Lake </option>
+            <option value = 75> Carson </option>
+            <option value = 101> Castaic </option>
+            <option value = 27> Cathedral City </option>
+            <option value = 155> Cerritos </option>
+            <option value = 146> Chatsworth </option>
+            <option value = 56> Cherry Valley </option>
+            <option value = 43> City of Commerce </option>
+            <option value = 153> Claremont </option>
+            <option value = 19> Coachella </option>
+            <option value = 60> Colton </option>
+            <option value = 36> Compton </option>
+            <option value = 73> Corona </option>
+            <option value = 231> Corona Del Mar </option>
+            <option value = 199> Costa Mesa </option>
+            <option value = 203> Coto De Caza </option>
+            <option value = 79> Covina </option>
+            <option value = 42> Cudahy </option>
+            <option value = 224> Culver City </option>
+            <option value = 165> Cypress </option>
+            <option value = 202> Dana Point </option>
+            <option value = 8> DHS </option>
+            <option value = 137> Diamond Bar </option>
+            <option value = 117> Downey </option>
+            <option value = 77> Duarte </option>
+            <option value = 162> Eagle Rock </option>
+            <option value = 68> El Monte </option>
+            <option value = 225> El Segundo </option>
+            <option value = 105> El Sereno </option>
+            <option value = 211> Encino </option>
+            <option value = 179> Fountain Valley </option>
+            <option value = 33> French Valley </option>
+            <option value = 163> Fullerton </option>
+            <option value = 122> Garden Grove </option>
+            <option value = 100> Gardena </option>
+            <option value = 140> Glassell Park </option>
+            <option value = 188> Glendale </option>
+            <option value = 120> Glendora </option>
+            <option value = 127> Granada Hills </option>
+            <option value = 129> Hacienda Heights </option>
+            <option value = 121> Harbor City </option>
+            <option value = 70> Hawaiian Gardens </option>
+            <option value = 136> Hawthorne </option>
+            <option value = 13> Hemet </option>
+            <option value = 222> Hermosa Beach </option>
+            <option value = 31> Highgrove </option>
+            <option value = 151> Highland Park </option>
+            <option value = 64> Hollydale </option>
+            <option value = 160> Hollywood </option>
+            <option value = 21> Homeland </option>
+            <option value = 192> Huntington Beach </option>
+            <option value = 48> Huntington Park </option>
+            <option value = 17> Idyllwild </option>
+            <option value = 142> Indian Wells </option>
+            <option value = 18> Indio </option>
+            <option value = 116> Inglewood </option>
+            <option value = 205> Irvine </option>
+            <option value = 53> Kagel Canyon </option>
+            <option value = 190> La Canada Flintridge </option>
+            <option value = 181> La Crescenta </option>
+            <option value = 109> La Habra </option>
+            <option value = 185> La Habra Heights </option>
+            <option value = 93> La Mirada </option>
+            <option value = 154> La Palma </option>
+            <option value = 57> La Puente </option>
+            <option value = 34> La Quinta </option>
+            <option value = 135> La Verne </option>
+            <option value = 219> Ladera Heights </option>
+            <option value = 228> Laguna Beach </option>
+            <option value = 187> Laguna Hills </option>
+            <option value = 201> Laguna Niguel </option>
+            <option value = 6> Lake Elizabeth </option>
+            <option value = 28> Lake Elsinore </option>
+            <option value = 159> Lake Forest </option>
+            <option value = 76> Lake Hughes </option>
+            <option value = 3> Lake Los Angeles </option>
+            <option value = 113> Lake Matthews </option>
+            <option value = 139> Lakeview Terrace </option>
+            <option value = 99> Lakewood </option>
+            <option value = 14> Lancaster </option>
+            <option value = 104> Lawndale </option>
+            <option value = 87> Leona Valley </option>
+            <option value = 126> Lincoln Heights </option>
+            <option value = 10> Little Rock </option>
+            <option value = 144> Lomita </option>
+            <option value = 132> Long Beach </option>
+            <option value = 193> Los Alamitos </option>
+            <option value = 110> Los Angeles </option>
+            <option value = 236> Los Feliz </option>
+            <option value = 37> Lynwood </option>
+            <option value = 234> Manhattan Beach </option>
+            <option value = 175> Mar Vista </option>
+            <option value = 46> Maywood </option>
+            <option value = 32> Menifee </option>
+            <option value = 138> Midway City </option>
+            <option value = 89> Mission Hills San Fernando </option>
+            <option value = 158> Mission Viejo </option>
+            <option value = 167> Monrovia </option>
+            <option value = 83> Montebello </option>
+            <option value = 150> Monterey Park </option>
+            <option value = 123> Montrose </option>
+            <option value = 23> Moreno Valley </option>
+            <option value = 210> Mount Washington </option>
+            <option value = 92> Mountain Center </option>
+            <option value = 58> Murrieta </option>
+            <option value = 125> Newhall </option>
+            <option value = 226> Newport Beach </option>
+            <option value = 96> Norco </option>
+            <option value = 107> North Hills </option>
+            <option value = 130> North Hollywood </option>
+            <option value = 214> North Tustin </option>
+            <option value = 157> Northridge </option>
+            <option value = 66> Norwalk </option>
+            <option value = 29> Nuevo/Lakeview </option>
+            <option value = 148> Orange </option>
+            <option value = 235> Ortega Mountain </option>
+            <option value = 4> Outside State </option>
+            <option value = 50> Pacoima </option>
+            <option value = 65> Palm Desert </option>
+            <option value = 91> Palm Springs </option>
+            <option value = 20> Palmdale </option>
+            <option value = 229> Palos Verdes Estates </option>
+            <option value = 232> Palos Verdes Peninsula </option>
+            <option value = 62> Panorama City </option>
+            <option value = 52> Paramount </option>
+            <option value = 189> Pasadena </option>
+            <option value = 12> Pearblossom </option>
+            <option value = 24> Perris </option>
+            <option value = 90> Phillips Ranch </option>
+            <option value = 63> Pico Rivera </option>
+            <option value = 152> Placentia </option>
+            <option value = 227> Playa Del Rey </option>
+            <option value = 39> Pomona </option>
+            <option value = 2> Quail Valley </option>
+            <option value = 30> Quartz Hill </option>
+            <option value = 108> Rancho Mirage </option>
+            <option value = 218> Rancho Palos Verdes </option>
+            <option value = 149> Rancho Santa Margarita </option>
+            <option value = 196> Redlands </option>
+            <option value = 215> Redondo Beach </option>
+            <option value = 102> Reseda </option>
+            <option value = 44> Riverside (City) </option>
+            <option value = 221> Rolling Hills Estates </option>
+            <option value = 26> Romoland </option>
+            <option value = 114> Rosemead </option>
+            <option value = 209> Rossmoor </option>
+            <option value = 141> Rowland Heights </option>
+            <option value = 119> Sage </option>
+            <option value = 206> San Clemente </option>
+            <option value = 115> San Dimas </option>
+            <option value = 49> San Fernando </option>
+            <option value = 171> San Gabriel </option>
+            <option value = 11> San Jacinto </option>
+            <option value = 183> San Juan Capistrano </option>
+            <option value = 230> San Marino </option>
+            <option value = 147> San Pedro </option>
+            <option value = 118> Santa Ana </option>
+            <option value = 69> Santa Fe Springs </option>
+            <option value = 98> Saugus </option>
+            <option value = 194> Seal Beach </option>
+            <option value = 133> Shadow Hills </option>
+            <option value = 208> Sherman Oaks </option>
+            <option value = 186> Sierra Madre </option>
+            <option value = 173> Signal Hill </option>
+            <option value = 172> Silver Lake </option>
+            <option value = 40> South El Monte </option>
+            <option value = 55> South Gate </option>
+            <option value = 213> South Pasadena </option>
+            <option value = 88> Stanton </option>
+            <option value = 161> Stevenson Ranch </option>
+            <option value = 223> Studio City </option>
+            <option value = 7> Sun City </option>
+            <option value = 112> Sun Valley </option>
+            <option value = 131> Sunland </option>
+            <option value = 195> Surfside </option>
+            <option value = 85> Sylmar </option>
+            <option value = 197> Tarzana </option>
+            <option value = 81> Temecula </option>
+            <option value = 166> Temple City </option>
+            <option value = 15> Thousand Palms </option>
+            <option value = 220> Toluca Lake </option>
+            <option value = 178> Torrance </option>
+            <option value = 128> Tujunga </option>
+            <option value = 174> Tustin </option>
+            <option value = 111> Valencia </option>
+            <option value = 168> Valley Glen </option>
+            <option value = 212> Valley Village </option>
+            <option value = 233> Venice </option>
+            <option value = 217> Villa Park </option>
+            <option value = 169> Walnut </option>
+            <option value = 94> West Covina </option>
+            <option value = 134> West Hills </option>
+            <option value = 216> Westchester </option>
+            <option value = 207> Westlake Village </option>
+            <option value = 145> Westminster </option>
+            <option value = 80> Whittier </option>
+            <option value = 41> Wildomar </option>
+            <option value = 45> Wilmington </option>
+            <option value = 38> Winchester </option>
+            <option value = 95> Winnetka </option>
+            <option value = 35> Woodcrest </option>
+            <option value = 180> Woodland Hills </option>
+            <option value = 182> Yorba Linda </option>
+            <option value = 86> Yucaipa </option>
             
         </select>
         <br>
-        
-
-        <label for = "Sqft/A'">
-        Sqft of House
-        </label>
-        <input type = "text" id = "Sqft/A" name = "Sqft/A" value = "0"> sqft/A
-        <br>
         <label for ="YrBuilt">
-        Year House was Built?
+        Year the house was Built?
         </label>
-        <input type = "text" id = "YrBuilt" name = "YrBuilt" value = "0">
+        <input type ="text" id="YrBuilt" name="YrBuilt" value="0">
         <br>
         <label for = "View">
-        Does your house have a good view?</label>
+        Does the house have a good view?</label>
         <select id = "View" name = "View">
             <option value = 0> No</option>
             <option value = 1> Yes </option>
         </select>
         <br>
         <label for = "Pool">
-        Does your house have a have a private Pool?</label>
+        Does the house have a private Pool?</label>
         <select id = "Pool" name = "Pool">
             <option value = 0> No</option>
             <option value = 1> Yes </option>
         </select>
         <br>
-        <label for ="Attics">
-        How many attics does your house have?
-        </label>
-        <input type = "text" id = "Attics" name = "Attics" value = "0">
-        <br>
-        <label for ="Basement">
-        Do you have a basement? If so how many?
-        </label>
-        <input type = "text" id = "Basement" name = "basement" value = "0">
-        <br>
         <label for ="Beds">
-        How many bedrooms does your house have?
+        How many bedrooms does the house have?
         </label>
         <input type = "text" id = "Beds" name = "Beds" value = "0">
         <br>
         <label for ="Baths">
-        How many baths does your house have?
+        How many baths does the house have?
         </label>
         <input type = "text" id = "baths" name = "baths" value = "0">
         <br>
-        <label for ="LSqft">
-        What is your lot size per square foot?
+        <label for ="Attics">
+        How many attics does the house have?
         </label>
-        <input type = "text" id = "LSqft" name = "LSqft" value = "0">
+        <input type = "text" id = "Attics" name = "Attics" value = "0">
+        <br>
+        <label for ="Basement">
+        How many basements does the house have?
+
+        </label>
+        <input type = "text" id = "Basement" name = "basement" value = "0">
         <br>
         <div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Price Prediction</button></div>
         <div class="alert alert-primary" role="alert">{{ prediction_text }}</div>
+        </form> 
+      <h3>For Investors:</h3>
+      <form action="/calculator_ca" method="POST"> 
+        <label for="investment">Investment (in USD) $
+        </label> 
+        <input type="text" id="investment" name="investment" value="100"> 
+        <br> 
+        <div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Investment Prediction</button></div>
+      </form>
+
+      <div class="alert alert-primary" role="alert">{{ roi_text }}</div>
 
         
         

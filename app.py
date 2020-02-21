@@ -101,7 +101,7 @@ def calculator_ca():
 		investment = float(x)
 	#calculate roi
 	roi = float(est_price) - float(investment)
-	return render_template('userinput.html', roi_text = 'Your expected return on investment (ROI) is approx. ${}'.format(roi))
+	return render_template('cali.html', roi_text = 'Your expected return on investment (ROI) is approx. ${}'.format(roi))
 
 
 
