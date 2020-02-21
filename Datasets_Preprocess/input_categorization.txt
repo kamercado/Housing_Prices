@@ -1,0 +1,103 @@
+'MSZoning', 
+ {"C (all)":1, "RH":2, "RM":2, "RL": 3, "FV":4}
+
+MSZoning: Identifies the general zoning classification of the sale.
+		
+       A	Agriculture 
+       C	Commercial
+       FV	Floating Village Residential
+       I	Industrial
+       RH	Residential High Density
+       RL	Residential Low Density
+       RP	Residential Low Density Park 
+       RM	Residential Medium Density
+
+
+LotFrontage: Linear feet of street connected to property
+
+Neighborhood: Physical locations within Ames city limits
+
+0,MeadowV  Meadow Village
+1,IDOTRR Iowa DOT and Rail Road
+2,BrDale Briardale
+3,BrkSide Brookside
+4,Edwards Edwards
+5,OldTown Old Town
+6,Sawyer Sawyer
+7,Blueste Bluestem
+8,SWISU South & West of Iowa State University
+9,NPkVill Northpark Villa
+10,NAmes North Ames
+11,Mitchel Mitchell
+12,SawyerW Sawyer West
+13,NWAmes Northwest Ames
+14,Gilbert Gilbert
+15,Blmngtn Bloomington Heights
+16,CollgCr College Creek
+17,Crawfor Crawford
+18,ClearCr  Clear Creek
+19,Somerst Somerset
+20,Veenker Veenker
+21,Timber Timberland
+22,StoneBr Stone Brook
+23,NridgHt Northridge Heights
+24,NoRidge Northridge
+
+'OverallQual', 
+OverallQual: Rates the overall material and finish of the house
+
+       10	Very Excellent
+       9	Excellent
+       8	Very Good
+       7	Good
+       6	Above Average
+       5	Average
+       4	Below Average
+       3	Fair
+       2	Poor
+       1	Very Poor
+
+'1stFlrSF', 
+'2ndFlrSF',
+
+'FullBath', 
+
+'KitchenQual',
+KitchenQual: Kitchen quality (5-1)
+
+       Ex	Excellent
+       Gd	Good
+       TA	Typical/Average
+       Fa	Fair
+       Po	Poor
+
+'TotRmsAbvGrd', 
+TotRmsAbvGrd: Total rooms above grade (does not include bathrooms)
+
+'Fireplaces', 
+Fireplaces: Number of fireplaces
+
+
+'GarageType', 
+GarageType: Garage location
+		
+       2Types	More than one type of garage
+       Attchd	Attached to home
+       Basment	Basement Garage
+       BuiltIn	Built-In (Garage part of house - typically has room above garage)
+       CarPort	Car Port
+       Detchd	Detached from home
+       NA	No Garage
+
+'GarageCars', 
+GarageCars: Size of garage in car capacity
+
+'GarageArea',
+GarageArea: Size of garage in square feet
+
+'WoodDeckSF', 
+WoodDeckSF: Wood deck area in square feet
+
+'OpenPorchSF'
+OpenPorchSF: Open porch area in square feet
+
