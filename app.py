@@ -66,7 +66,7 @@ def calculator():
 		investment = float(x)
 	#calculate roi
 	roi = round((float(est_price) - float(investment))/float(investment), 2)
-	return render_template('userinput.html', roi_text = 'Your expected return on investment (ROI) is approx. {}'.format(roi))
+	return render_template('userinput.html', roi_text = 'Your expected return on investment (ROI) is approx. {}%'.format(roi))
 
 
 @app.route('/predict_ca',methods=['POST'])
@@ -95,7 +95,7 @@ def calculator_ca():
 		investment = float(x)
 	#calculate roi
 	roi = round((float(est_price) - float(investment))/float(investment), 2)
-	return render_template('cali.html', roi_text = 'Your expected return on investment (ROI) is approx. {}'.format(roi))
+	return render_template('cali.html', roi_text = 'Your expected return on investment (ROI) is approx. {}%'.format(roi))
 
 
 
