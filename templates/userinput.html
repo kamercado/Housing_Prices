@@ -5,49 +5,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Housing Prices - Iowa</title>
+  <title>Housing Prices - Ames IA</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-<style>
-.container {
-  position: relative;
-  text-align: center;
-
-}
-
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-  color: black;
-}
-
-</style>
+  <script src="https://kit.fontawesome.com/90051f9e42.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/style_cover.css')}}">
 </head>
 
 <body>
-<nav class = "navbar navbar-expand-lg bg-light">
-			<a class = "navbar-brand" href= "/"> Housing Prices </a>
-			<button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarSupportedContent" aria-controls = "navbarSupportedContent" aria-expanded = "False" aria-label = "Toggle navigation">
-				<span class = "navbar-toggler-icon"></span>
-			</button>
-
-		  
-        <a class="nav-link" href="/">Iowa<span class="sr-only">(current)</span></a>  
-         <a class="nav-link" href="/cali">Southern California<span class="sr-only">(current)</span></a>
-         
-
-
-    
-    </nav>
+<div class="wrapper">
+  	<div class="sidebar">
+  		<h5>House Price Predictor</h5>
+  		<ul>
+  			<li><a href ="/"><i class="fas fa-dollar-sign"></i>Ames, IA</a></li>
+  			<li><a href ="/cali"><i class="fas fa-dollar-sign"></i>Southern CA</a></li>
+  		</ul>
+	</div>
+</div>
+<div class="main_content">
 <div class="container">
-    <div class="row">
-		<img src="https://final-project-data-uci-da-bootcamp.s3-us-west-2.amazonaws.com/houseImage.jpg" alt="Ames Iowa" width="100%" height="500">
-		<div class="top-right"><h1>House Price Prediction in Ames, Iowa</h1></div>
-	
-    </div>
-<div style="text-align: left"> 
+    <div class="header"><h2>House Price Prediction in Ames, Iowa</h2></div>
+	<img src="https://final-project-data-uci-da-bootcamp.s3-us-west-2.amazonaws.com/houseImage.jpg" alt="Ames Iowa" width="99%" height="500">
 
+<div class="info">
 <div class="card">
   <div class="card-body">
   <form action="/predict" method="POST"> 
@@ -158,30 +137,23 @@
 	<div class="alert alert-primary" role="alert">{{ prediction_text }}</div>
   </form>  
   <form action="/results" method="POST">
-  <div class="container">
-  <div class="alert alert-warning" role="alert" style="text-align: center"></div>
-  </div>
-  <div class="row">
-  <div class="col-md-12">  
-  <div id="gauge"></div>
-  </div>
-  </div>    
+  	<h3>Where Your Price Stands in the Market: </h3>
+  	<div class="col-md-12">  
+  		<div id="gauge"></div>
+  	</div>
   </form>
   <h3>For Investors:</h3>
   <form action="/calculator" method="POST"> 
-    <label for="investment">Investment (in USD) $
-</label> 
+    <label for="investment">Investment (in USD) $</label> 
     <input type="text" id="investment" name="investment" value="100"> 
     <br> 
 	<div class="alert alert-warning" role="alert" style="text-align: center"><button type="submit" class="btn btn-success">Investment Prediction</button></div>
   </form>
-  
   <div class="alert alert-primary" role="alert">{{ roi_text }}</div>
   </div>
 </div>
-
-</div> 
-
+</div>
+</div>
 </div>
 
 
@@ -194,7 +166,7 @@
         {
             domain: { x: [0, 1], y: [0, 1] },
             value: data,
-            title: { text: "Where Your Price Stands in the Market - Ames Iowa" },
+            title: { text: "Between Minimum and Maximum Prices - Ames IA" },
             type: "indicator",
             mode: "gauge+number",
             gauge: { axis: { range: [34900*0.8, 755000*1.2]}}
